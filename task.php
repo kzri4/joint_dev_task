@@ -214,11 +214,11 @@ class User
 
     public function info() {
         echo <<< EOM
-        名前：$this->name 
-        年齢：$this->age 
-        性別：$this->sex 
+名前：$this->name 
+年齢：$this->age 
+性別：$this->sex
 
-        EOM;
+EOM;
     }
 }
 
@@ -245,9 +245,9 @@ Class Man {
     } 
 
     public function introduce() {
-        if ($this->age === 32) {
+        if (($this->age > 10 && $this->age <= 32) || ($this->age > 32)) {
             echo "こんにちは，" . $this->name . "と申します。宜しくお願いいたします。\n";
-        } elseif ($this->age === 10) {
+        } elseif ($this->age <= 10) {
             echo "はいさいまいど〜，" . $this->name . "です！！！";
         }
     }
@@ -337,7 +337,11 @@ echo PHP_EOL;
 print("#####q21#####".PHP_EOL);
 
 for ($i = 1; $i <= 30; $i++) {
-    if ($i % 15 === 0) {
+    if ($i % 105 === 0) {
+        echo "FizzBuzzHoge";
+    } elseif ($i % 35 === 0) {
+        echo "BuzzHoge";
+    } elseif ($i % 15 === 0) {
         echo "FizzBuzz\n";
     } elseif ($i % 21 === 0) {
         echo "FizzHoge\n";
