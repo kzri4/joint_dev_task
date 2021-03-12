@@ -245,9 +245,9 @@ Class Man {
     } 
 
     public function introduce() {
-        if (($this->age > 10 && $this->age <= 32) || ($this->age > 32)) {
+        if ($this->age > 10) {
             echo "こんにちは，" . $this->name . "と申します。宜しくお願いいたします。\n";
-        } elseif ($this->age <= 10) {
+        } else {
             echo "はいさいまいど〜，" . $this->name . "です！！！";
         }
     }
@@ -341,15 +341,15 @@ for ($i = 1; $i <= 30; $i++) {
         echo "FizzBuzzHoge";
     } elseif ($i % 35 === 0) {
         echo "BuzzHoge";
-    } elseif ($i % 15 === 0) {
-        echo "FizzBuzz\n";
     } elseif ($i % 21 === 0) {
+        echo "FizzBuzz\n";
+    } elseif ($i % 15 === 0) {
         echo "FizzHoge\n";
-    } elseif ($i % 3 === 0) {
+    } elseif ($i % 7 === 0) {
         echo "Fizz\n";
     } elseif ($i % 5 === 0 ) {
         echo "Buzz\n";
-    } elseif ($i % 7 === 0) {
+    } elseif ($i % 3 === 0) {
         echo "Hoge\n";
     } else {
       echo $i . "\n";
